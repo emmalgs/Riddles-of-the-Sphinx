@@ -32,5 +32,12 @@ namespace Sphinx.Tests
       Assert.AreEqual(expected, newRiddle.Question1);
     }
 
+    [TestMethod]
+    public void CheckQuestion1_ChecksIfInputIsEqualToAnswer_Bool()
+    {
+      Riddle newRiddle = new Riddle();
+      string input = "joseph";
+      Assert.AreEqual(true, newRiddle.CheckQuestion1(input));
+    }
   }
 }
