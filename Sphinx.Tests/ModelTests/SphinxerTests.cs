@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using Sphinx.Models;
 
 namespace Sphinx.Tests
@@ -18,17 +17,15 @@ namespace Sphinx.Tests
     [TestMethod]
     public void Question1_GetsQuestion1_String()
     {
-      Riddle newRiddle = new Riddle();
       string expected = "what is Kyle's middle name?";
-      Assert.AreEqual(expected, newRiddle.Question1);
+      Assert.AreEqual(expected, Riddle.Question1);
     }
 
     [TestMethod]
     public void CheckQuestion1_ChecksIfInputIsEqualToAnswer_Bool()
     {
-      Riddle newRiddle = new Riddle();
       string input = "joseph";
-      Assert.AreEqual(true, newRiddle.CheckQuestion1(input));
+      Assert.AreEqual(true, Riddle.CheckQuestion1(input));
     }
   }
 }
