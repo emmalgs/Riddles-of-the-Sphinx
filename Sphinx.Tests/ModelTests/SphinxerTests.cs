@@ -25,11 +25,12 @@ namespace Sphinx.Tests
     // }
 
     [TestMethod]
-    public void Question1_StoresQuestion_String()
+    public void Question1_GetsQuestion1_String()
     {
       Riddle newRiddle = new Riddle();
-      string expected = "what is probably 6 feet tall and definitely dumb?";
+      string expected = "what is Kyle's middle name?";
       Assert.AreEqual(expected, newRiddle.Question1);
     }
+
   }
 }
