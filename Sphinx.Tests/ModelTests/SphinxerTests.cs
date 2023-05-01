@@ -4,26 +4,32 @@ using Sphinx.Models;
 
 namespace Sphinx.Tests
 {
-    [TestClass]
-    public class SphinxerTests
+  [TestClass]
+  public class SphinxerTests
+  {
+
+    [TestMethod]
+    public void Riddle_IsInstanceOfRiddle_Riddle()
     {
-
-        [TestMethod]
-        public void Riddle_IsInstanceOfRiddle_Riddle()
-        {
-            Riddle newRiddle = new Riddle();
-            Assert.AreEqual(typeof(Riddle), newRiddle.GetType());
-        }
-
-        [TestMethod]
-        public void Riddles_IsInstanceOfDictionary_Dictionary()
-        {
-            Riddle newRiddle = new Riddle();
-            Dictionary<string, string> expected = new Dictionary<string, string> {};
-            Dictionary<string, string> result = newRiddle.Riddles;
-            CollectionAssert.AreEqual(expected, result);
-        }
-
-				
+      Riddle newRiddle = new Riddle();
+      Assert.AreEqual(typeof(Riddle), newRiddle.GetType());
     }
+
+    // [TestMethod]
+    // public void Riddles_HasKeyOfRiddleAndValueOfAnswer_String()
+    // {
+    //   Riddle newRiddle = new Riddle();
+    //   Dictionary<string, string> expected = new Dictionary<string, string> {{ "kyle", "what is probably 6 feet tall and definitely stupid"}, {"a bottle", "what best describes the shape of kyle's head?"}, {"kyle's shirt", "what is sweaty and probably grey?"}};
+    //   Dictionary<string, string> result = newRiddle.Riddles;
+    //   CollectionAssert.AreEqual(expected, result);
+    // }
+
+    [TestMethod]
+    public void Question1_StoresQuestion_String()
+    {
+      Riddle newRiddle = new Riddle();
+      string expected = "what is probably 6 feet tall and definitely dumb?";
+      Assert.AreEqual(expected, newRiddle.Question1);
+    }
+  }
 }
